@@ -40,13 +40,20 @@ Beispiel: <strong>24b9da6552252987aa493b52f8696cd6d3b00373</strong>
 
 <h2 align="center">Zustände der Dateien</h2>
 <ul>
-	<li>modified</li>
-	<li>stage</li>
-	<li>commited</li>
+	<li><strong>modified</strong> &nbsp;&nbsp;&nbsp;-> geänderte Datei</li>
+	<li><strong>stage</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> vorgemerkte Dateien</li>
+	<li><strong>commited</strong> &nbsp;-> im lokalen Server gespeicherte Dateien</li>
 </ul>
 
-<h2 align="center">Git Befehle</h2>
+<h2 align="center">Git Ordnerstruktur und wichtige Befehle</h2>
 
+<h3>Ordner</h3>
+<ul>
+	<li><strong>.git</strong> Unterverzeichnis mit allen relevanten</li>
+	<li><strong>.gitignore</strong> Verzeichnis um Dateien und Ordner zu ignorieren</li>
+</ul>
+
+<code>
 <ul>
 
 	<li><strong>$git help</strong></li>
@@ -54,7 +61,7 @@ Beispiel: <strong>24b9da6552252987aa493b52f8696cd6d3b00373</strong>
 	<li><strong>$git help config</strong></li>
 	<li><strong>$git init</strong></li>
 
-.git Unterverzeichnis mit allen relevanten 
+ 
 
 	<li><strong>$git branch</strong></li>
 	<li><strong>$git branch -d <name></strong></li>
@@ -63,6 +70,7 @@ Beispiel: <strong>24b9da6552252987aa493b52f8696cd6d3b00373</strong>
 	<li><strong>$git push origin <name></strong></li>
 
 </ul>
+</code>
 
 Anwendungsbeispiele:
 
