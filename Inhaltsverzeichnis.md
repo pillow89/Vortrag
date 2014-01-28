@@ -54,30 +54,49 @@ Beispiel: <strong>24b9da6552252987aa493b52f8696cd6d3b00373</strong>
 </ul>
 
 <code>
+<h3>Hilfe und Status Funktionen</h3>
 <ul>
-
+	---- zeigt die Hilfe an ----
 	<li><strong>$git help</strong></li>
 	<li><strong>$git –help</strong></li> 
 	<li><strong>$git help config</strong></li>
-	<li><strong>$git init</strong></li>
-
- 
-
-	<li><strong>$git branch</strong></li>
-	<li><strong>$git branch -d <name></strong></li>
-	<li><strong>$git checkout -b <name></strong></li>
-	<li><strong>$git pull origin master</strong></li>
-	<li><strong>$git push origin <name></strong></li>
+	---- 
+	<li><strong>$git status</strong> --> zeigt den jetzigen Status an. Wurden Dateien verändert?</li>
 
 </ul>
+
+<h3>Branch Funktionen</h3>
+<ul>
+
+	<li><strong>$git init</strong> --> legt ein neues Repository an</li>
+	<li><strong>$git branch</strong> --> zeigt an welche Branches vorhanden sind.</li>
+	<li><strong>$git branch -d (name)</strong> --> löscht folgenden Branch</li>
+	<li><strong>$git checkout (name)</strong> --> wechselt zu folgendem Branch</li>
+	<li><strong>$git checkout -b (name)</strong> --> erstellt folgenden Branch</li>
+	<li><strong>$git checkout -f </strong> --> setzt alle commited files zurück</li>
+	
+</ul>
+
+<h3>Allgemeine Funktionen zum Entwickeln</h3>
+
+<ul>
+	<li><strong>$git pull origin master</strong> --> holt sich alle Informationen vom Server unter Branch master</li>
+	<li><strong>$git add (filename)</strong> --> fügt Datei zum bevorstehenden commit hinzu. (. nimmt alle Dateien)</li>
+	<li><strong>$git commit -am "message"</strong> --> schiebt alle zuvor hinzugefügten veränderte Dateien auf den lokalen Server</li>
+	<li><strong>$git push origin (name)</strong> --> schiebt alle commited files zu diesem Branch auf den Server</li>
+</ul>
+
 </code>
 
-Anwendungsbeispiele:
+<h2 align="center">Anwendungsbeispiele:</h2>
 
-Zwei Programmierer bearbeiten ein Projekt.
+Zwei Programmierer bearbeiten ein Projekt. Programmierer A soll das Design
+der index Seite verändern. Programmierer B soll die Logik verändern.
+Als Resultat wird die erweiterte Indexpage entstehen.
 
 Folgende Dateien sind vorhanden:
 
+<pre>
 Project/
 	Grafik/
 		index
@@ -85,6 +104,7 @@ Project/
 	Module/
 		indexModul
 		ersteSeiteModul
+</pre>
 
 
           
@@ -92,26 +112,55 @@ Project/
 Programmierer A bearbeitet die Grafiken. Und verändert die indexseite.
 
 <p align="center">
+<pre>
 $git add .
 $git commit -am „changed the indexpage“
 $git push origin BranchA
+</pre>
 </p>
 
 Der Admin überprüft die Veränderung und merged es mit dem master
 
+<pre>
 $git merge -m „changed the indexpage“ BranchA
+</pre>
 
 
 Nun möchte Programmierer B in seinen Modulen etwas ändern, aber braucht die aktuelle Grafiken dazu:
 
+<pre>
 $git pull origin master
+</pre>
 
 Er verändert seine Dateien
 
+<pre>
 $git add .
 $git commit -am „changed the indexmodule“
 $git push origin BranchB
+</pre>
 
 Der Admin überprüft die Veränderung und merged
 
+<pre>
 $git merge -m „changed the indexmodule“ BranchB
+</pre>
+
+
+<h2>show</h2>
+
+<ul>
+	<li>create a repository</li>
+	<li>clone a repository</li>
+	<li>pull</li>
+	<li>commit</li>
+	<li>push</li>
+	<li>set new branches</li>
+	<li>advantages of creating new branches(switching very fast)</li>
+	<li>merge</li>
+	<li>conflict</li>
+	<li>admin interface</li>
+	<li>pull request</li>
+	<li>history</li>
+	<li>differences to svn</li> 
+</ul>
